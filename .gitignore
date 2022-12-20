@@ -1,0 +1,53 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# testing
+/coverage
+test.ts
+
+# production
+/dist
+
+# packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+*.tgz
+*.tar.gz
+
+# dev files
+.idea/
+.idea
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# debug log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+package-lock.json
+
+# other
+certificate.pem
+certrequest.csr
+privatekey.pem
+tsconfig.tsbuildinfo

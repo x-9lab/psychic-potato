@@ -1,0 +1,47 @@
+.G-layout {
+    &NavSide {
+        top: 0;
+        left:0;
+        bottom: 25px;
+        position: fixed;
+        background: #333842;
+        &Space {
+            height: 10px;
+        }
+
+        .ant-menu {
+            background: initial;
+
+            &.ant-menu-inline-collapsed > .ant-menu-item {
+                background: initial;
+                padding: 0 calc(50% - 24px / 2);
+            }
+
+            &-item {
+                padding: 0;
+
+                &-active, &-selected {
+                    color: #6b9fca;
+                }
+            }
+
+            &:not(.ant-menu-horizontal) {
+                .ant-menu-item-selected {
+                    background: initial;
+                    padding: 0 calc(50% - 24px / 2);
+                }
+            }
+        }
+
+        .anticon {
+            line-height: initial!important;
+            vertical-align: middle;
+
+            svg {
+                width: 25px;
+                height: 25px;
+                vertical-align: middle;
+            }
+        }
+    }
+}

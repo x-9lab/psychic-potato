@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ],
+            "@utils": [
+                "src/utils/index"
+            ],
+            "@pages/*": [
+                "src/pages/*"
+            ],
+            "@consts/*": [
+                "src/consts/*"
+            ],
+            "@config/*": [
+                "src/@config/*"
+            ],
+            "@config": [
+                "src/@config/index"
+            ]
+        },
+        "typeRoots": [
+            "node_modules/@types",
+            "src/app.d.ts"
+        ],
+        "types": [
+            "../saga/src"
+        ]
+    },
+    "include": [
+        "vite.config.ts"
+    ]
+}

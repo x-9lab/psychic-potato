@@ -1,0 +1,85 @@
+@keyframes layoutHeaderSildeDown {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 30px;
+    }
+}
+
+@keyframes layoutHeaderSildeUp {
+    0% {
+        opacity: 1;
+        height: 30px;
+    }
+
+    100% {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+.G-layout {
+    &Header {
+        top: 0;
+        right: 0;
+        opacity: 1;
+        left: 54px;
+        z-index: 10;
+        height: 30px;
+        display: flex;
+        position: fixed;
+        background: #21252b;
+        -webkit-app-region: drag;
+        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.425);
+        &Logo {
+            // width: 200px;
+            height: 30px;
+            -webkit-app-region: drag;
+        }
+
+        &Ex {
+            color:#ead66d!important;
+        }
+
+        &Ctrls {
+            display: flex;
+            min-width: 30px;
+            margin: 0 20px 0 0;
+            align-items: center;
+            justify-content: space-around;
+
+            .anticon {
+                color: #949494;
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        &Container {
+            flex:1;
+            cursor: default;
+            line-height: 30px;
+            text-align: center;
+            -webkit-app-region: drag;
+        }
+
+        &Fns {
+            display: flex;
+            padding: 0 20px 0 0;
+        }
+
+        &Show {
+            animation: layoutHeaderSildeDown .1s ease-out forwards;
+        }
+
+        &Hide {
+            animation: layoutHeaderSildeUp .1s ease-out forwards;
+        }
+    }
+}

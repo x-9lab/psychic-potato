@@ -1,0 +1,142 @@
+@keyframes layoutSildeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes layoutSildeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes layoutLoading {
+    0% {
+        color: #ffffff;
+        transform: scale(1);
+    }
+
+    80% {
+        color: #ead66d;
+        transform: scale(1.3);
+    }
+}
+
+.G-layout {
+    display: flex;
+    min-height: 100%;
+    min-width: 1024px;
+    flex-direction: column;
+
+    >.ant-layout-content {
+        display: flex;
+    }
+
+    &Side {
+        background-color: #151515 !important;
+
+        &Show {
+            animation: layoutSildeIn .1s ease-out forwards;
+        }
+
+        &Hide {
+            animation: layoutSildeOut .1s ease-out forwards;
+        }
+    }
+
+    &Menus {
+        flex: 1;
+
+        .ant-menu-item,
+        .ant-menu-submenu-title {
+            padding: 0 10px !important;
+        }
+
+        .ant-menu-inline-collapsed {
+            width: 50px;
+        }
+    }
+
+    &Main {
+        flex: 1;
+        display: flex;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: #282c34;
+        height: calc(100vh - 80px);
+
+        &Layout {
+            position: relative;
+            padding: 0 0 15px;
+            margin: 0 0 0 55px;
+
+            &MFA {
+                margin: 0;
+                padding: 0;
+
+                .M-animationRouter {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &Content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &Header {
+        &Fns {
+            &List {
+                display: flex;
+            }
+
+            &Item {
+                display: flex;
+                vertical-align: middle;
+
+                &Cell {
+                    width: 30px;
+                    cursor: pointer;
+                    line-height: 30px;
+                    margin: 0 0 0 5px;
+                    text-align: center;
+
+                    .anticon {
+                        vertical-align: middle;
+                    }
+
+                    &Loading {
+                        animation: layoutLoading 1s infinite cubic-bezier(0.895, 0.03, 0.685, 0.22);
+                    }
+
+                    &Act {
+                        color: #ead66d;
+                    }
+                }
+
+                .ant-dropdown-trigger {
+                    padding: 4px 0 0;
+                }
+            }
+        }
+
+        &Dd {
+            margin-left: 5px;
+        }
+    }
+}

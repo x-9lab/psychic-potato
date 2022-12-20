@@ -1,0 +1,65 @@
+@keyframes layoutFooterSildeDown {
+    0% {
+        opacity: 1;
+        height: 30px;
+    }
+
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes layoutFooterSildeUp {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 25px;
+    }
+}
+
+.G-layout {
+    &Footer {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 0;
+        height: 25px;
+        position: fixed;
+        font-size: 11px;
+        padding: 0 20px;
+        overflow: hidden;
+        line-height: 25px;
+        text-align: right;
+        background: #040c1b;
+        box-sizing: border-box;
+
+        &Show {
+            animation: layoutFooterSildeUp .1s ease-out forwards;
+        }
+
+        &Hide {
+            animation: layoutFooterSildeDown .1s ease-out forwards;
+        }
+
+        span {
+            margin: 0 10px 0 0;
+        }
+
+        a {
+            color: #fff;
+
+            &:hover,
+            &:visited,
+            &:focus,
+            &:active {
+                color: #fff;
+            }
+        }
+    }
+}

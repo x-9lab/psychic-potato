@@ -1,0 +1,26 @@
+User-agent: *
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Sogou web spider/4.0
+Disallow: /
+
+User-agent: Sogou inst spider/4.0
+Disallow: /
+
+User-agent: YoudaoBot
+Disallow: /
+
+User-agent: Sosospider
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Xenu
+Disallow: /
